@@ -21,7 +21,7 @@ const HomePage=()=>{
     return(
         <div>
             <h1 className='text-blue-500 underline text-4xl text-center mx-auto'>Book Details</h1>
-            <Link to={"/create"}>Add a new book</Link>
+            <Link to={"/create"}><button className='bg-green-300 hover:bg-blue-500 text-white px-2 rounded'>Create</button></Link>
             <table class="table-auto border-collapse border border-slate-500 text-center">
                 <thead>
                     <tr>

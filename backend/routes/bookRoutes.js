@@ -5,12 +5,13 @@ const router=express.Router()
 
 router.post("/",async(req,res)=>{
     try{
-        if(!req.body.name || !req.body.author || !req.body.year) 
+        if(!req.body.name || !req.body.author || !req.body.year || !req.body.description) 
             return res.status(201).json({"errmessage":"invalid data"})
         const user={
             name:req.body.name,
             author:req.body.author,
-            year:req.body.year
+            year:req.body.year,
+            description:req.body.description
         }
         
         const newUser= await book.create(user)
